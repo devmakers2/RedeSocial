@@ -51,10 +51,6 @@ public class Profile {
 		return this.username;
 	}
 	
-//	String getPassword() {
-//		return this.password;
-//	}
-	
 	List<Post> getPosts() {
 		return this.posts;
 	}

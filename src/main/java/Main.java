@@ -85,7 +85,7 @@ public class Main {
 		System.out.println("cadastro realizado com sucesso");
 	}
 	
-	private static Profile login() {  // ask user credentials, depois attempt login; get Profile If Credentials Correct ?
+	private static Profile login() {
 		System.out.println("----------");
 
 		if (profiles.isEmpty()) {
