@@ -22,7 +22,4 @@ public class Post {
 	String getContent() {
 		return this.content;
 	}
-	
-	
-
 }

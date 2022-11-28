@@ -3,6 +3,7 @@ package main.java;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Profile {
 	private String name;
@@ -14,6 +15,28 @@ public class Profile {
 		this.name = name;
 		this.username = username;
 		this.password = password;
+	}
+	
+	void makeAPost() {		
+		System.out.println("por favos informe os dados do post:");
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("data (exemplo: “22/11/2022”): ");
+		String date = scanner.nextLine();
+		
+		System.out.print("hora (exemplo: “22:38”): ");
+		String hour = scanner.nextLine();
+		
+		System.out.print("conteúdo: ");
+		String content = scanner.nextLine();
+		
+		this.posts.add(new Post(date, hour, content));
+	}
+	
+	void printPosts() {
+		for (Post post : this.posts) {
+			System.out.println(post.getDate() + " às " + post.getHour() + " - \"" + post.getContent() + "\"");
+		}
 	}
 	
 	String getName() {
@@ -49,7 +72,4 @@ public class Profile {
 		return Objects.equals(name, other.name) && Objects.equals(password, other.password)
 				&& Objects.equals(username, other.username);
 	}
-	
-	
-
 }
