@@ -17,7 +17,7 @@ public class Profile {
 		this.password = password;
 	}
 	
-	void makeAPost() {		
+	void addAPost() {		
 		System.out.println("por favos informe os dados do post:");
 		Scanner scanner = new Scanner(System.in);
 		
@@ -39,6 +39,10 @@ public class Profile {
 		}
 	}
 	
+	boolean isPasswordEqualTo(String password) {
+		return this.password.equals(password);
+	}
+	
 	String getName() {
 		return this.name;
 	}
@@ -47,9 +51,9 @@ public class Profile {
 		return this.username;
 	}
 	
-	String getPassword() {
-		return this.password;
-	}
+//	String getPassword() {
+//		return this.password;
+//	}
 	
 	List<Post> getPosts() {
 		return this.posts;
